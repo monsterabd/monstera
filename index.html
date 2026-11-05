@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monstera BD | Your Plant Keepers - Landscape Architecture & Gardening</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forestDark: '#0B4121',
+          forestDeep: '#072b16',
+          emeraldAccent: '#70BC42',
+          emeraldLight: '#8cd261',
+          sageBg: '#f3f8f2',
+          cardWhite: '#ffffff',
+          slateText: '#1e293b',
+          mutedText: '#64748b',
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f3f7f3;
+    color: #1e293b;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .english-text {
+    font-family: 'Poppins', 'Montserrat', sans-serif !important;
+    color: #70BC42 !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  /* Multi-corner Low-Opacity Monstera Botanical Watermarks */
+  body::before {
+    content: "";
+    position: fixed;
+    top: -40px;
+    left: -50px;
+    width: 360px;
+    height: 360px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.03;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%230B4121" d="M464 256c0-114.9-93.1-208-208-208S48 141.1 48 256c0 45.4 14.6 87.4 39.5 121.7C106 352.2 138.8 336 176 336c13.3 0 24 10.7 24 24s-10.7 24-24 24c-26.5 0-50.6 10.5-68.5 27.6C148.7 447.8 199.3 464 256 464c114.9 0 208-93.1 208-208z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-15deg);
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    bottom: -60px;
+    right: -60px;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.025;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%2370BC42" d="M464 256c0-114.9-93.1-208-208-208S48 141.1 48 256c0 45.4 14.6 87.4 39.5 121.7C106 352.2 138.8 336 176 336c13.3 0 24 10.7 24 24s-10.7 24-24 24c-26.5 0-50.6 10.5-68.5 27.6C148.7 447.8 199.3 464 256 464c114.9 0 208-93.1 208-208z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(145deg);
+  }
+
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(11, 65, 33, 0.12);
+    box-shadow: 0 10px 30px -5px rgba(11, 65, 33, 0.06);
+    border-radius: 20px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card-light:hover {
+    transform: translateY(-4px);
+    border-color: rgba(112, 188, 66, 0.45);
+    box-shadow: 0 20px 40px -10px rgba(11, 65, 33, 0.14);
+  }
+
+  .header-glass-bar {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(11, 65, 33, 0.1);
+  }
+
+  .badge-soft-sage {
+    background-color: #eaf5e7;
+    color: #0B4121;
+    border: 1px solid #c7e5c1;
+    font-weight: 700;
+  }
+
+  .glass-card-brand {
+    background: linear-gradient(135deg, #0B4121 0%, #072b16 100%);
+    border: 1px solid rgba(112, 188, 66, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(7, 43, 22, 0.25);
+  }
+
+  .glass-card-sage {
+    background: #eaf3ea;
+    border: 1px solid rgba(11, 65, 33, 0.15);
+    border-radius: 24px;
+    transition: all 0.35s ease;
+  }
+
+  .service-card-soft-green {
+    background: #f2f9ed;
+    border: 1px solid rgba(112, 188, 66, 0.35);
+    border-radius: 20px;
+    transition: all 0.35s ease;
+  }
+
+  .btn-emerald {
+    background: linear-gradient(135deg, #70BC42, #0B4121);
+    color: #ffffff;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(112, 188, 66, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-emerald:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(112, 188, 66, 0.45);
+  }
+
+  .btn-outline-dark {
+    background: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    color: #0B4121;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-dark:hover {
+    border-color: #70BC42;
+    color: #0B4121;
+    background: #f0fdf4;
+  }
+
+  @keyframes pulseSlow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  .animate-pulse-slow {
+    animation: pulseSlow 2s infinite ease-in-out;
+  }
+
+  /* Infinite Non-stop Continuous Marquee Scroll */
+  @keyframes infiniteMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .marquee-content {
+    display: inline-flex;
+    gap: 1.5rem;
+    animation: infiniteMarquee 20s linear infinite;
+    pointer-events: none;
+  }
+
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.active {
+    display: flex;
+  }
+
+  .admin-sidebar {
+    background: #072b16;
+    background-image: radial-gradient(circle at 10% 20%, rgba(112, 188, 66, 0.15) 0%, transparent 40%);
+  }
+
+  /* Mobile Responsive Multi-Column & Scaled Fits */
+  @media (max-width: 640px) {
+    .mobile-single-row-3 {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 0.5rem !important;
+    }
+    .mobile-[#heroStatsContainer] {
+      padding: 0.25rem !important;
+    }
+    .mobile-slim-banner {
+      flex-direction: row !important;
+      text-align: left !important;
+      padding: 0.75rem 1rem !important;
+    }
+    .mobile-reviews-row {
+      display: flex !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory;
+      gap: 0.75rem !important;
+      padding-bottom: 0.5rem;
+    }
+    .mobile-reviews-row > div {
+      min-width: 82% !important;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+  }
+</style>
+</head>
+<body class="antialiased">
+
+  <!-- Top Announcement Scroller -->
+  <div class="bg-forestDark text-white py-2.5 px-4 text-xs sm:text-sm font-bold overflow-hidden border-b-2 border-emeraldAccent shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-3 w-full">
+        <span class="bg-[#70BC42] text-slate-950 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider shrink-0 shadow">বিশেষ অফার</span>
+        <marquee behavior="scroll" direction="left" id="topOfferMarquee" class="w-full text-emerald-100 font-bold tracking-wide text-xs sm:text-sm">
+          🌿 এখন যেকোনো ল্যান্ডস্কেপ ও ছাদবাগান প্রজেক্টে পাচ্ছেন ফ্রি অন-সাইট কনসালটেশন! সরাসরি কল দিন: +880 1775-641861 🌿
+        </marquee>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-white shrink-0 ml-4 font-bold text-sm">
+        <a href="tel:+8801775641861" id="topPhoneText" class="hover:text-emeraldAccent transition"><i class="fa-solid fa-phone mr-1.5"></i>01775-641861</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation with Floating Glass Effect over Hero Slider -->
+  <header class="sticky top-2 sm:top-4 z-50 px-2 sm:px-6 mt-1 flex justify-center">
+    <div class="w-[94%] md:w-auto max-w-5xl header-glass-bar rounded-full px-3 sm:px-8 py-2 flex items-center justify-center overflow-x-auto mx-auto shadow-xl no-scrollbar">
+      <nav id="headerNavContainer" class="flex items-center justify-center gap-1.5 sm:gap-4 text-[11px] sm:text-sm font-bold text-slate-900 tracking-wide shrink-0">
+        <a href="#hero" id="nav-hero" class="nav-link px-2.5 sm:px-4 py-1.5 rounded-full transition duration-300 whitespace-nowrap active-nav">হোম</a>
+        <a href="#services" id="nav-services" class="nav-link px-2.5 sm:px-4 py-1.5 rounded-full transition duration-300 whitespace-nowrap">সার্ভিস</a>
+        <a href="#products-shop" id="nav-products-shop" class="nav-link px-2.5 sm:px-4 py-1.5 rounded-full transition duration-300 whitespace-nowrap">শপ</a>
+        <a href="#projects" id="nav-projects" class="nav-link px-2.5 sm:px-4 py-1.5 rounded-full transition duration-300 whitespace-nowrap">গ্যালারি</a>
+        <a href="#team" id="nav-team" class="nav-link px-2.5 sm:px-4 py-1.5 rounded-full transition duration-300 whitespace-nowrap">টিম</a>
+        <a href="#contact" id="nav-contact" class="nav-link px-2.5 sm:px-4 py-1.5 rounded-full transition duration-300 whitespace-nowrap">যোগাযোগ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 pt-4">
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-3 lg:py-6 text-center relative z-10">
+      
+      <!-- Swiper Cover Slider -->
+      <div class="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-emerald-100 mb-5 sm:mb-8 bg-slate-100 relative group">
+        <div class="swiper heroSwiper w-full h-[240px] sm:h-[360px] md:h-[420px]">
+          <div id="heroSliderWrapper" class="swiper-wrapper">
+            <!-- Dynamic Slides from Data -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next !text-white opacity-0 group-hover:opacity-100 transition"></div>
+          <div class="swiper-button-prev !text-white opacity-0 group-hover:opacity-100 transition"></div>
+        </div>
+      </div>
+
+      <!-- Hero Title -->
+      <h1 id="heroTitle" class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-forestDark leading-snug mb-3 px-2">
+        কংক্রিটের শহরে তৈরি করুন <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#70BC42] to-[#0B4121]">প্রকৃতির সুশীতল ও অভিজাত আঙিনা</span>
+      </h1>
+
+      <div class="my-4 sm:my-6 px-3">
+        <p id="heroDescription" class="text-sm sm:text-lg text-slate-800 max-w-3xl mx-auto font-medium leading-relaxed">
+          আমাদের দক্ষ ও সুসজ্জিত টিম দিচ্ছে আধুনিক বায়োফিলিক আর্কিটেকচার, কাস্টম ল্যান্ডস্কেপ ডিজাইন এবং ছাদবাগান সল্যুশন।
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 my-6 sm:my-8">
+        <a href="#contact" class="btn-emerald py-3 sm:py-3.5 px-7 sm:px-8 text-sm sm:text-base flex items-center gap-2 shadow-md">
+          <i class="fa-solid fa-calendar-check text-base"></i>
+          <span id="heroBtnPrimary">সাইট ভিজিট বুক করুন</span>
+        </a>
+        <a href="#projects" class="btn-outline-dark py-3 sm:py-3.5 px-7 sm:px-8 text-sm sm:text-base flex items-center gap-2 shadow-sm">
+          <i class="fa-solid fa-images text-[#70BC42] text-base"></i>
+          <span id="heroBtnSecondary">প্রজেক্ট পোর্টফোলিও দেখুন</span>
+        </a>
+      </div>
+
+      <!-- Counter Bar (Enforced 3 Column Single Row even on mobile) -->
+      <div class="mt-8 sm:mt-12">
+        <div id="heroStatsContainer" class="grid grid-cols-3 gap-2 sm:gap-5 max-w-4xl mx-auto">
+          <div class="glass-card-brand p-2 sm:p-6 text-center flex flex-col justify-center items-center">
+            <div class="text-xl sm:text-5xl lg:text-6xl font-black text-[#70BC42] font-mono mb-0.5 counter-number" data-target="5">0+</div>
+            <div class="text-[10px] sm:text-sm text-slate-100 font-bold flex items-center justify-center gap-1 mt-0.5">
+              <i class="fa-regular fa-calendar-check text-emeraldLight text-[10px] sm:text-xs"></i>
+              <span>অভিজ্ঞতা (বছর)</span>
+            </div>
+          </div>
+          <div class="glass-card-brand p-2 sm:p-6 text-center flex flex-col justify-center items-center">
+            <div class="text-xl sm:text-5xl lg:text-6xl font-black text-[#70BC42] font-mono mb-0.5 counter-number" data-target="235">0+</div>
+            <div class="text-[10px] sm:text-sm text-slate-100 font-bold flex items-center justify-center gap-1 mt-0.5">
+              <i class="fa-solid fa-circle-check text-emeraldLight text-[10px] sm:text-xs"></i>
+              <span>সম্পন্ন প্রজেক্ট</span>
+            </div>
+          </div>
+          <div class="glass-card-brand p-2 sm:p-6 text-center flex flex-col justify-center items-center">
+            <div class="text-xl sm:text-5xl lg:text-6xl font-black text-[#70BC42] font-mono mb-0.5 counter-number" data-target="15">0+</div>
+            <div class="text-[10px] sm:text-sm text-slate-100 font-bold flex items-center justify-center gap-1 mt-0.5">
+              <i class="fa-solid fa-users-gear text-emeraldLight text-[10px] sm:text-xs"></i>
+              <span>টিম মেম্বার</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-8 sm:py-12 border-t border-slate-200/80">
+      <div class="glass-card-sage p-5 sm:p-10 shadow-md relative overflow-hidden">
+        <div class="text-center mb-6 sm:mb-10">
+          <span class="inline-block px-4 py-1.5 rounded-full badge-soft-sage text-xs sm:text-sm font-bold uppercase tracking-widest mb-2.5 shadow-sm english-text">About Us</span>
+          <h2 id="aboutTitle" class="text-2xl sm:text-4xl font-extrabold text-forestDark">আমাদের কথা</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+          <div class="bg-white/95 p-6 sm:p-8 rounded-2xl border-l-4 border-l-[#70BC42] shadow-sm transform hover:-translate-y-2 hover:scale-[1.02] transition duration-300 hover:shadow-xl cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-forestDark text-2xl mb-4 shadow-inner">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-forestDark mb-2.5">মনস্টেরা এর মিশন <span class="english-text text-sm sm:text-base font-bold">(Mission)</span></h3>
+            <p id="aboutMissionText" class="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">কংক্রিটের ঢাকা শহরে প্রতি বর্গফুটে সবুজের স্পর্শ ফিরিয়ে আনা এবং ইট-পাথরের ভবনগুলোকে প্রাণবন্ত বায়োফিলিক ইকোসিস্টেমে রূপান্তরিত করা।</p>
+          </div>
+
+          <div class="bg-white/95 p-6 sm:p-8 rounded-2xl border-l-4 border-l-forestDark shadow-sm transform hover:-translate-y-2 hover:scale-[1.02] transition duration-300 hover:shadow-xl cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-slate-200 flex items-center justify-center text-forestDark text-2xl mb-4 shadow-inner">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-forestDark mb-2.5">মনস্টেরা এর ভিশন <span class="english-text text-sm sm:text-base font-bold">(Vision)</span></h3>
+            <p id="aboutVisionText" class="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">বাংলাদেশের ল্যান্ডস্কেপ আর্কিটেকচার ও বায়োফিলিক গার্ডেনিং সেক্টরে শীর্ষস্থানীয় ও বিশ্বস্ত সমাধান প্রদানকারী প্রতিষ্ঠান হিসেবে আত্মপ্রকাশ করা।</p>
+          </div>
+        </div>
+
+        <!-- Workflow Steps -->
+        <div class="mt-10 pt-8 sm:pt-10 border-t border-emerald-900/10 relative z-10">
+          <div class="text-center mb-8 sm:mb-10">
+            <span class="inline-block px-4 py-1.5 rounded-full badge-soft-sage text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 shadow-sm english-text">Step by Step Workflow</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-forestDark">আমাদের কাজের ধাপ</h3>
+          </div>
+          <div id="workflowStepsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 relative">
+            <div class="bg-white p-6 text-center rounded-2xl border border-slate-200/80 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-[#70BC42]">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-[#0B4121] to-[#70BC42] text-white mx-auto flex flex-col items-center justify-center shadow-md mb-4 transform transition duration-500 hover:rotate-6">
+                <i class="fa-solid fa-magnifying-glass-location text-xl"></i>
+              </div>
+              <h4 class="text-lg font-bold text-forestDark mb-2">ধাপ ০১: পরিদর্শন</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-normal">গ্রাহকের বাগান করার জায়গাটি ল্যান্ডস্কেপ এক্সপার্ট দ্বারা পরিদর্শন করা হয়।</p>
+            </div>
+            <div class="bg-white p-6 text-center rounded-2xl border border-slate-200/80 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-[#70BC42]">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-[#0B4121] to-[#70BC42] text-white mx-auto flex flex-col items-center justify-center shadow-md mb-4 transform transition duration-500 hover:rotate-6">
+                <i class="fa-solid fa-compass-drafting text-xl"></i>
+              </div>
+              <h4 class="text-lg font-bold text-forestDark mb-2">ধাপ ০২: পরিকল্পনা</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-normal">গ্রাহকের চাহিদা অনুযায়ী ডিজাইন এবং কোটেশন এর মাধ্যমে পরিকল্পনা প্রদান করা হয়।</p>
+            </div>
+            <div class="bg-white p-6 text-center rounded-2xl border border-slate-200/80 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-[#70BC42]">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-[#0B4121] to-[#70BC42] text-white mx-auto flex flex-col items-center justify-center shadow-md mb-4 transform transition duration-500 hover:rotate-6">
+                <i class="fa-solid fa-circle-check text-xl"></i>
+              </div>
+              <h4 class="text-lg font-bold text-forestDark mb-2">ধাপ ০৩: বাস্তবায়ন</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-normal">পরিকল্পনা অনুযায়ী মনস্টেরা এর এক্সপার্ট টিম দ্বারা প্রজেক্টটি বাস্তবায়ন করা হয়।</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-8 sm:py-12 border-t border-slate-200/80">
+      <!-- Promo Banner Slim Inline Fit for Mobile -->
+      <div class="bg-gradient-to-r from-[#0B4121] via-[#11572d] to-[#0B4121] rounded-2xl p-3.5 sm:p-7 mb-8 text-white shadow-xl relative overflow-hidden border border-emeraldAccent/40 flex flex-row items-center justify-between gap-2.5 mobile-slim-banner">
+        <div class="flex items-center gap-2.5 sm:gap-4 text-left">
+          <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl bg-[#70BC42] text-slate-950 flex items-center justify-center text-sm sm:text-xl shrink-0 shadow-md animate-pulse-slow">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <div>
+            <span class="bg-[#70BC42] text-slate-950 text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-wider inline-block mb-0.5">বিশেষ প্রমোশন</span>
+            <h3 class="text-xs sm:text-xl font-extrabold text-white leading-tight">ছাদ ও ল্যান্ডস্কেপিং প্রজেক্টে ১৫% EXTRA ছাড়!</h3>
+            <p class="hidden sm:block text-xs text-emerald-100">আজই বুকিং করুন এবং বিনামূল্যে পাবেন 2D ল্যান্ডস্কেপ লেআউট ডিজাইন।</p>
+          </div>
+        </div>
+        <a href="#contact" class="bg-[#70BC42] hover:bg-emerald-500 text-slate-950 font-extrabold py-1.5 sm:py-2.5 px-3 sm:px-6 rounded-full text-[10px] sm:text-sm whitespace-nowrap shadow transition shrink-0">
+          বুক করুন &rarr;
+        </a>
+      </div>
+
+      <div class="p-5 sm:p-10 border-2 border-forestDark/20 rounded-3xl bg-white shadow-xl">
+        <div class="text-center mb-8 sm:mb-10">
+          <span class="inline-block px-4 py-1.5 rounded-full badge-soft-sage text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 shadow-sm english-text">Our Core Services</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-forestDark">আমাদের সেবাসমূহ</h2>
+        </div>
+        <div id="servicesGridContainer" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <!-- Dynamic Content -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Garden Shop Section with Compact Offer Widget -->
+    <section id="products-shop" class="py-8 sm:py-12 border-t border-slate-200/80">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6 sm:mb-8 text-center md:text-left">
+        <div>
+          <span class="inline-block px-4 py-1.5 rounded-full badge-soft-sage text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 shadow-sm english-text">Garden Essentials Shop</span>
+          <h2 class="text-2xl sm:text-4xl font-bold text-forestDark">আমাদের প্রিমিয়াম প্রোডাক্টস</h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-1 font-normal">উচ্চমানের রেডি মাটির মিক্স, ডেকোরেটিভ পাথর ও গার্ডেনিং উপাদান</p>
+        </div>
+        <div class="bg-gradient-to-r from-emerald-100 to-emerald-50 border border-emerald-300 p-3.5 rounded-2xl shadow-sm flex items-center gap-3 max-w-xs shrink-0">
+          <div class="w-9 h-9 rounded-full bg-[#70BC42] text-white flex items-center justify-center text-sm shadow">
+            <i class="fa-solid fa-clock fa-spin"></i>
+          </div>
+          <div class="text-left">
+            <span class="text-[10px] font-black bg-[#0B4121] text-white px-2 py-0.5 rounded uppercase tracking-wider">ধামাকা অফার</span>
+            <h4 class="text-xs font-bold text-forestDark mt-0.5">সীমিত সময়ের বিশেষ ডিসকাউন্ট!</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto" id="productsShopContainer">
+        <!-- Dynamic Content -->
+      </div>
+    </section>
+
+    <!-- Projects Portfolio Section -->
+    <section id="projects" class="py-8 sm:py-12 border-t border-slate-200/80">
+      <div class="p-5 sm:p-10 border-2 border-forestDark/20 rounded-3xl bg-white shadow-xl">
+        <div class="bg-gradient-to-r from-[#0B4121] to-[#11572d] rounded-2xl p-6 sm:p-9 mb-8 sm:mb-10 text-white shadow-xl relative overflow-hidden border border-emeraldAccent/30">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-5 relative z-10 text-center sm:text-left">
+            <div>
+              <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-soft-sage text-xs sm:text-sm font-bold uppercase tracking-wider mb-2.5 english-text">
+                <i class="fa-solid fa-gem text-emerald-700"></i>
+                <span>Our Exclusive Work</span>
+              </div>
+              <h2 class="text-2xl sm:text-4xl font-extrabold text-white">আমাদের প্রজেক্ট গ্যালারি</h2>
+              <p class="text-xs sm:text-base text-slate-200 mt-1 font-normal">প্রতিটি প্রজেক্টে ক্লিক করে বিস্তারিত ফটো দেখুন</p>
+            </div>
+            <a href="#contact" class="btn-emerald py-3 px-7 text-xs sm:text-sm whitespace-nowrap shrink-0 shadow-lg">
+              <i class="fa-solid fa-paper-plane mr-1.5"></i> কোটেশন চান?
+            </a>
+          </div>
+        </div>
+
+        <div id="projectsGridContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
+          <!-- Dynamic Content -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Expert Team Section -->
+    <section id="team" class="py-8 sm:py-12 border-t border-slate-200/80">
+      <div class="text-center mb-8 sm:mb-10">
+        <span class="inline-block px-4 py-1.5 rounded-full badge-soft-sage text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 shadow-sm english-text">Our Expert Team</span>
+        <h2 class="text-2xl sm:text-4xl font-bold text-forestDark">আমাদের এক্সপার্ট প্রফেশনাল টিম</h2>
+      </div>
+
+      <div id="teamGridContainer" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 text-center">
+        <!-- Dynamic Content -->
+      </div>
+    </section>
+
+    <!-- Clients Network Marquee -->
+    <section id="clients" class="py-8 sm:py-10 border-t border-slate-200/80">
+      <div class="text-center mb-5 sm:mb-6">
+        <span class="inline-block px-4 py-1.5 rounded-full badge-soft-sage text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 shadow-sm english-text">OUR CORPORATE CLIENTS</span>
+        <h3 class="text-2xl sm:text-3xl font-bold text-forestDark">আমাদের কর্পোরেট ক্লায়েন্টসমূহ</h3>
+      </div>
+      <div class="glass-card-light py-5 sm:py-7 px-4 overflow-hidden border border-slate-200/80 shadow-md">
+        <div class="marquee-wrapper">
+          <div id="clientLogosMarquee" class="marquee-content">
+            <!-- Dynamic Content -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Reviews Section -->
+    <section id="reviews" class="py-8 sm:py-12 border-t border-slate-200/80">
+      <div class="text-center mb-8 sm:mb-10">
+        <span class="inline-block px-4 py-1.5 rounded-full badge-soft-sage text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 shadow-sm english-text">Testimonials</span>
+        <h2 id="reviewsSectionTitle" class="text-2xl sm:text-4xl font-bold text-forestDark">আমাদের ক্লায়েন্টদের মতামত</h2>
+      </div>
+      <div id="reviewsGridContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6 mobile-reviews-row">
+        <!-- Dynamic Content -->
+      </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="py-8 sm:py-12 border-t border-slate-200/80">
+      <div class="glass-card-light p-6 sm:p-10 shadow-xl">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 pb-8 border-b border-slate-200">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest block mb-1.5 english-text">Book Site Visit</span>
+            <h3 id="bookingSectionHeading" class="text-2xl sm:text-3xl font-bold text-forestDark">সাইট ভিজিট বুকিং ও তথ্য সারণী</h3>
+            <p class="text-xs sm:text-base text-slate-600 mt-1 font-normal">আপনার স্থান পরিদর্শনের জন্য ফরমটি পূরণ করুন।</p>
+          </div>
+          <div class="bg-forestDark text-white p-4 rounded-2xl flex items-center gap-4 shrink-0 shadow-md w-full md:w-auto justify-center">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/8801775641861" alt="Monstera QR Code" class="w-16 h-16 rounded-lg bg-white p-1">
+            <div class="text-left pr-2">
+              <span class="text-xs font-bold uppercase block tracking-wider english-text text-[#70BC42]">WhatsApp QR</span>
+              <span class="text-xs sm:text-sm font-bold text-white block">ছবি পাঠাতে স্ক্যান করুন</span>
+              <a href="https://wa.me/8801775641861" target="_blank" class="text-xs text-slate-300 underline hover:text-emeraldLight">ডাইরেক্ট চ্যাট করুন</a>
+            </div>
+          </div>
+        </div>
+
+        <form onsubmit="handleFormSubmit(event)" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs sm:text-sm font-bold text-slate-800 mb-2">আপনার নাম *</label>
+              <input type="text" name="name" required placeholder="উদাহরণ: তানভীর আহমেদ" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:border-[#70BC42]">
+            </div>
+            <div>
+              <label class="block text-xs sm:text-sm font-bold text-slate-800 mb-2">ফোন নম্বর *</label>
+              <input type="tel" name="phone" required placeholder="017XXXXXXXX" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:border-[#70BC42]">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs sm:text-sm font-bold text-slate-800 mb-2">পছন্দের সেবা ক্যাটাগরি *</label>
+              <select name="service" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:border-[#70BC42]">
+                <option value="">-- সেবা নির্বাচন করুন --</option>
+                <option value="ছাদবাগান (Rooftop Garden)">ছাদবাগান (Rooftop Garden)</option>
+                <option value="বারান্দা বাগান (Balcony Garden)">বারান্দা বাগান (Balcony Garden)</option>
+                <option value="ইনডোর ও রুম গার্ডেন (Indoor Plant Decor)">ইনডোর ও রুম গার্ডেন (Indoor Plant Decor)</option>
+                <option value="ভার্টিক্যাল গার্ডেন ও গ্রিন ওয়াল (Vertical Garden & Green Wall)">ভার্টিক্যাল গার্ডেন ও গ্রিন ওয়াল (Vertical Garden & Green Wall)</option>
+                <option value="ল্যান্ডস্কেপ ডিজাইন ও আর্কিটেকচার (Landscape Architecture)">ল্যান্ডস্কেপ ডিজাইন ও আর্কিটেকচার (Landscape Architecture)</option>
+                <option value="ব্যাকইয়ার্ড ও উঠান বাগান (Backyard & Lawn Garden)">ব্যাকইয়ার্ড ও উঠান বাগান (Backyard & Lawn Garden)</option>
+                <option value="রেস্টুরেন্ট ও ক্যাফে গ্রিনারি (Restaurant & Cafe Greenery)">রেস্টুরেন্ট ও ক্যাফে গ্রিনারি (Restaurant & Cafe Greenery)</option>
+                <option value="কর্পোরেট ও অফিস প্ল্যান্টস (Corporate Office Greenery)">কর্পোরেট ও অফিস প্ল্যান্টস (Corporate Office Greenery)</option>
+                <option value="কাস্টম ফাউন্টেন ও কই ফিশ পন্ড (Water Fountain & Koi Pond)">কাস্টম ফাউন্টেন ও কই ফিশ পন্ড (Water Fountain & Koi Pond)</option>
+                <option value="স্মার্ট ড্রিপ ইরিগেশন ও সেচ ব্যবস্থা (Smart Drip Irrigation)">স্মার্ট ড্রিপ ইরিগেশন ও সেচ ব্যবস্থা (Smart Drip Irrigation)</option>
+                <option value="প্রাকৃতিক লন ও ঘাস স্থাপন (Natural Turf & Lawn Development)">প্রাকৃতিক লন ও ঘাস স্থাপন (Natural Turf & Lawn Development)</option>
+                <option value="ইনডোর ফ্রেম ও প্ল্যান্ট আর্ট (Vertical Plant Frame Art)">ইনডোর ফ্রেম ও প্ল্যান্ট আর্ট (Vertical Plant Frame Art)</option>
+                <option value="মাসিক বাগান পরিচর্যা ও মেইনটেনেন্স (Monthly Garden Maintenance)">মাসিক বাগান পরিচর্যা ও মেইনটেনেন্স (Monthly Garden Maintenance)</option>
+                <option value="অফিশিয়াল ও কর্পোরেট গাছ ভাড়া (Plant Rental Service)">অফিশিয়াল ও কর্পোরেট গাছ ভাড়া (Plant Rental Service)</option>
+                <option value="অন্যান্য কাস্টম ল্যান্ডস্কেপ প্রজেক্ট (Other Custom Projects)">অন্যান্য কাস্টম ল্যান্ডস্কেপ প্রজেক্ট (Other Custom Projects)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs sm:text-sm font-bold text-slate-800 mb-2">প্রজেক্ট লোকেশন</label>
+              <input type="text" name="location" placeholder="যেমন: গুলশান ২, ঢাকা" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:border-[#70BC42]">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs sm:text-sm font-bold text-slate-800 mb-2">বার্তার বিবরণ</label>
+            <textarea name="message" rows="3" placeholder="স্থান বা জায়গার বিবরন লিখুন..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:border-[#70BC42]"></textarea>
+          </div>
+          <button type="submit" class="btn-emerald w-full justify-center py-4 flex items-center gap-2 text-sm sm:text-lg shadow-md">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>সাবমিট করুন</span>
+          </button>
+        </form>
+
+        <div id="formSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-forestDark text-sm text-center font-bold">
+          <i class="fa-solid fa-circle-check text-[#70BC42] mr-2"></i> ধন্যবাদ! আপনার রিকোয়েস্ট সফলভাবে জমা হয়েছে।
+        </div>
+      </div>
+
+      <!-- Maintenance Banner Inline Mobile Optimized -->
+      <div class="mt-6 bg-gradient-to-r from-[#0B4121] via-[#11572d] to-[#0B4121] p-3.5 sm:p-5 rounded-2xl flex flex-row items-center justify-between gap-3 shadow-lg border border-emeraldAccent/40 text-white mobile-slim-banner">
+        <div class="flex items-center gap-2.5 sm:gap-4 text-left">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#70BC42] text-slate-950 flex items-center justify-center text-sm sm:text-lg shrink-0 shadow animate-pulse-slow">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 mb-0.5">
+              <span class="bg-rose-500 text-white text-[8px] sm:text-[9px] font-black px-1.5 py-0.5 rounded uppercase">জরুরি খবর</span>
+              <span class="text-[10px] sm:text-xs text-emerald-300 font-bold">মেইনটেনেন্স প্যাকেজ</span>
+            </div>
+            <h4 class="text-xs sm:text-base font-extrabold text-white leading-tight">মাসিক পরিচর্যা প্যাকেজে বিশাল ছাড়!</h4>
+            <p class="hidden sm:block text-xs text-emerald-100">আমাদের টিম আপনার ছাদবাগানের পুরো দেখাভাল করবে নিয়মিত।</p>
+          </div>
+        </div>
+        <a href="tel:+8801775641861" class="bg-[#70BC42] hover:bg-emerald-500 text-slate-950 font-extrabold py-1.5 sm:py-2 px-3 sm:px-5 rounded-full text-[10px] sm:text-xs whitespace-nowrap shadow transition shrink-0">
+          কল করুন
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 2-Column Footer Box -->
+  <section class="mt-12 bg-white pt-6 pb-12 border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-[#f2f8f2] p-6 rounded-3xl border border-[#cde8cc]">
+        <h4 class="text-base font-bold text-forestDark mb-4 flex items-center gap-2"><i class="fa-solid fa-link text-[#70BC42]"></i> <span>গুরুত্বপূর্ণ লিঙ্কস</span></h4>
+        <ul class="grid grid-cols-2 gap-3 text-xs sm:text-sm text-slate-800 font-medium">
+          <li><a href="#hero" class="hover:text-[#70BC42] transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[#70BC42] text-xs"></i> <span>হোম পেজ</span></a></li>
+          <li><a href="#about" class="hover:text-[#70BC42] transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[#70BC42] text-xs"></i> <span>আমাদের কথা</span></a></li>
+          <li><a href="#services" class="hover:text-[#70BC42] transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[#70BC42] text-xs"></i> <span>আমাদের সেবাসমূহ</span></a></li>
+          <li><a href="#products-shop" class="hover:text-[#70BC42] transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[#70BC42] text-xs"></i> <span>গার্ডেনিং শপ</span></a></li>
+          <li><a href="#projects" class="hover:text-[#70BC42] transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[#70BC42] text-xs"></i> <span>প্রজেক্ট পোর্টফোলিও</span></a></li>
+          <li><a href="#contact" class="hover:text-[#70BC42] transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[#70BC42] text-xs"></i> <span>যোগাযোগ ও বুকিং</span></a></li>
+        </ul>
+      </div>
+      <div class="bg-[#f2f8f2] p-6 rounded-3xl border border-[#cde8cc]">
+        <h4 class="text-base font-bold text-forestDark mb-4 flex items-center gap-2"><i class="fa-solid fa-headset text-[#70BC42]"></i> <span>যোগাযোগের ঠিকানা</span></h4>
+        <div class="space-y-3 text-xs sm:text-sm text-slate-800 font-medium">
+          <p class="flex items-center gap-2.5"><i class="fa-solid fa-location-dot text-[#70BC42] text-base shrink-0"></i> <span>322/F, West Rampura, Dhaka - 1219</span></p>
+          <p class="flex items-center gap-2.5"><i class="fa-solid fa-phone text-[#70BC42] text-base shrink-0"></i> <span>+880 1775-641861</span></p>
+          <p class="flex items-center gap-2.5"><i class="fa-solid fa-envelope text-[#70BC42] text-base shrink-0"></i> <span>contact.monstera.bd@gmail.com</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Bottom Bar -->
+  <footer class="bg-white py-6 text-slate-600 border-t border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2.5 sm:gap-3 text-center md:text-left">
+        <img id="footerLogoImg" src="https://i.ibb.co.com/XxmDT0Vq/monstera-website-logo-245x40-pix.png" alt="Monstera Logo" class="h-8 w-auto mx-auto md:mx-0">
+        <p id="footerTaglineText" class="text-xs text-slate-600">Your plant keepers — প্রফেশনাল ল্যান্ডস্কেপ আর্কিটেকচার সেবা।</p>
+      </div>
+      <div id="footerSocialsContainer" class="flex items-center justify-center gap-2.5">
+        <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-forestDark hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-forestDark hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/8801775641861" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-forestDark hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 pt-4 mt-4 border-t border-slate-100 text-center text-xs text-slate-500">
+      <span id="footerCopyrightText" onclick="handleSecretClick()" class="cursor-pointer select-none hover:text-slate-800 transition">© 2026 Monstera BD. All Rights Reserved. (3-Click Secret Dashboard)</span>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Widgets -->
+  <div class="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
+    <a href="tel:+8801775641861" class="w-12 h-12 rounded-full bg-forestDark text-white flex items-center justify-center shadow-2xl opacity-80 hover:opacity-100 hover:scale-110 transition duration-300 border-2 border-white" title="কল করুন">
+      <i class="fa-solid fa-phone text-lg"></i>
+    </a>
+    <a href="https://wa.me/8801775641861" target="_blank" class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl opacity-80 hover:opacity-100 hover:scale-110 transition duration-300 border-2 border-white" title="হোয়াটসঅ্যাপ">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div id="galleryModal" class="modal-overlay" onclick="closeModal()">
+    <div class="max-w-3xl w-full bg-white rounded-2xl p-6 relative border border-slate-200 shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-500 hover:text-rose-500 text-2xl z-20">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3 id="modalTitle" class="text-xl font-bold text-forestDark mb-1.5 pr-8"></h3>
+      <p id="modalDesc" class="text-xs text-slate-600 mb-4"></p>
+      <div id="modalImagesGrid" class="grid grid-cols-3 gap-3"></div>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SAAS ADMIN DASHBOARD MODAL -->
+  <div id="adminModalOverlay" class="modal-overlay">
+    <div class="max-w-6xl w-full bg-slate-950 text-slate-100 rounded-3xl p-6 relative border border-emerald-500/30 shadow-2xl overflow-y-auto max-h-[92vh]" onclick="event.stopPropagation()">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+        <div class="flex items-center gap-3">
+          <img src="https://i.ibb.co.com/XxmDT0Vq/monstera-website-logo-245x40-pix.png" class="h-7 w-auto">
+          <div>
+            <h2 class="text-lg font-bold text-white">Monstera Executive Control Center</h2>
+            <p class="text-xs text-slate-400">লাইভ ওয়েবসাইট ডেটা এডিটর ও অ্যাডমিন ড্যাশবোর্ড</p>
+          </div>
+        </div>
+        <button onclick="closeAdminModal()" class="w-8 h-8 rounded-full bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Login View -->
+      <div id="adminLoginSection" class="py-8 max-w-md mx-auto text-center space-y-4">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-950 border border-emerald-500/40 text-[#70BC42] flex items-center justify-center text-2xl mx-auto shadow-2xl">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">সিকিউর অ্যাডমিন অথেন্টিকেশন</h3>
+          <p class="text-xs text-slate-400">ড্যাশবোর্ডে প্রবেশ করতে পাসওয়ার্ড দিন (ডিফল্ট: monstera123)</p>
+        </div>
+        <form onsubmit="handleAdminLogin(event)" class="space-y-3">
+          <input type="password" id="adminPasswordInput" placeholder="পাসওয়ার্ড লিখুন..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white text-center focus:outline-none focus:border-[#70BC42]">
+          <button type="submit" class="btn-emerald w-full py-3 text-xs">লগইন করুন</button>
+          <div id="loginErrorMsg" class="hidden text-rose-400 text-xs font-semibold">ভুল পাসওয়ার্ড! আবার চেষ্টা করুন।</div>
+        </form>
+      </div>
+
+      <!-- Main Dashboard Panel -->
+      <div id="adminPanelContent" class="hidden flex flex-col md:flex-row gap-6">
+        <aside class="w-full md:w-64 admin-sidebar p-4 rounded-2xl border border-emerald-900/40 shrink-0">
+          <div class="flex items-center gap-3 pb-4 border-b border-emerald-900/60 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-[#70BC42] flex items-center justify-center text-slate-950 font-bold text-sm shadow">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <h4 id="admSidebarUser" class="text-xs font-bold text-white">কাউসার আহমেদ</h4>
+              <p class="text-[10px] text-emerald-400">Administrator</p>
+            </div>
+          </div>
+
+          <nav class="space-y-1">
+            <a href="javascript:void(0)" onclick="switchAdminTab('hero')" id="sidebarBtn-hero" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold bg-emerald-900/50 border-l-4 border-[#70BC42] text-white">
+              <i class="fa-solid fa-sliders text-[#70BC42]"></i> হিরো ও স্লাইডার
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('booking')" id="sidebarBtn-booking" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-cloud text-emerald-400"></i> গ্লোবাল ক্লাউড ও গুগল শিট
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('services')" id="sidebarBtn-services" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-layer-group text-emerald-400"></i> সেবাসমূহ (৮টি)
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('products')" id="sidebarBtn-products" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-box-open text-emerald-400"></i> গার্ডেন শপ
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('projects')" id="sidebarBtn-projects" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-images text-emerald-400"></i> পোর্টফোলিও
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('reviews')" id="sidebarBtn-reviews" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-comments text-emerald-400"></i> ক্লায়েন্ট রিভিউ
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('team')" id="sidebarBtn-team" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-users text-emerald-400"></i> এক্সপার্ট টিম
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('clients')" id="sidebarBtn-clients" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-building text-emerald-400"></i> ক্লায়েন্ট লোগো
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('footer')" id="sidebarBtn-footer" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-font text-emerald-400"></i> ফুটার ও লিঙ্কস
+            </a>
+            <a href="javascript:void(0)" onclick="switchAdminTab('security')" id="sidebarBtn-security" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white">
+              <i class="fa-solid fa-shield-halved text-emerald-400"></i> পাসওয়ার্ড ও ইউজার
+            </a>
+          </nav>
+
+          <div class="pt-4 border-t border-emerald-900/60 mt-6">
+            <button onclick="adminLogout()" class="text-xs text-rose-400 hover:underline flex items-center gap-2">
+              <i class="fa-solid fa-right-from-bracket"></i> লগআউট
+            </button>
+          </div>
+        </aside>
+
+        <!-- Right Content Panels Area -->
+        <div class="flex-1 space-y-4">
+          
+          <div id="tabContent-hero" class="space-y-3 bg-slate-900 p-4 rounded-2xl border border-slate-800">
+            <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">হিরো টাইটেল ও কভার স্লাইডার ম্যানেজার</h4>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">টপ অফার স্ক্রোলিং টেক্সট</label>
+              <input type="text" id="admOfferTextInput" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">ফোন নম্বর</label>
+              <input type="text" id="admTopPhoneInput" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">হিরো মেইন টাইটেল</label>
+              <textarea id="admHeroTitleInput" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white"></textarea>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">হিরো সাবটাইটেল (২-লাইন)</label>
+              <textarea id="admHeroDescInput" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white"></textarea>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">বাটন ১ টেক্সট</label>
+                <input type="text" id="admHeroBtn1Input" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">বাটন ২ টেক্সট</label>
+                <input type="text" id="admHeroBtn2Input" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white">
+              </div>
+            </div>
+            <div class="pt-2 border-t border-slate-800">
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-xs font-bold text-emerald-400">কভার স্লাইডার ইমেজ ইউআরএল (একাধিক স্লাইড)</label>
+                <button type="button" onclick="addAdminHeroSlideField()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-2.5 py-1 rounded text-[10px] font-bold">+ স্লাইড যোগ করুন</button>
+              </div>
+              <div id="adminHeroSlidesList" class="space-y-2 max-h-40 overflow-y-auto pr-1"></div>
+            </div>
+          </div>
+
+          <div id="tabContent-booking" class="hidden space-y-3 bg-slate-900 p-4 rounded-2xl border border-slate-800">
+            <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">গ্লোবাল ক্লাউড সিঙ্ক ও গুগল শিট সেটিংস</h4>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">গুগল শিট / ক্লাউড API Endpoint URL (Global Cross-Device Sync)</label>
+              <input type="url" id="admGoogleSheetUrlInput" placeholder="https://script.google.com/macros/s/.../exec" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white">
+              <p class="text-[10px] text-slate-400 mt-1">এখানে যেকোনো ১টি লিংক (গুগল শিট Web App URL অথবা JSONBin API Link) দিলেই চলবে। যেকোনো ডিভাইস থেকে এডিট করলে সব ফোনে লাইভ সিঙ্ক হয়ে যাবে।</p>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">কন্টাক্ট সেকশন হেডিং</label>
+              <input type="text" id="admBookingHeadingInput" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white">
+            </div>
+          </div>
+
+          <div id="tabContent-services" class="hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">সেবাসমূহ ম্যানেজার</h4>
+              <button type="button" onclick="addNewServiceItem()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1">+ নতুন সেবা যোগ করুন</button>
+            </div>
+            <div id="adminServicesList" class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[500px] overflow-y-auto pr-1"></div>
+          </div>
+
+          <div id="tabContent-products" class="hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">গার্ডেন শপ প্রোডাক্টস ম্যানেজার</h4>
+              <button type="button" onclick="addNewProductItem()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1">+ নতুন প্রোডাক্ট যোগ করুন</button>
+            </div>
+            <div id="adminProductsList" class="space-y-3 max-h-[500px] overflow-y-auto pr-1"></div>
+          </div>
+
+          <div id="tabContent-projects" class="hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">পোর্টফোলিও প্রজেক্টস ম্যানেজার</h4>
+              <button type="button" onclick="addNewProjectItem()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1">+ নতুন প্রজেক্ট যোগ করুন</button>
+            </div>
+            <div id="adminProjectsList" class="space-y-3 max-h-[500px] overflow-y-auto pr-1"></div>
+          </div>
+
+          <div id="tabContent-reviews" class="hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">ক্লায়েন্ট রিভিউ ম্যানেজার</h4>
+              <button type="button" onclick="addNewReviewItem()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1">+ নতুন রিভিউ যোগ করুন</button>
+            </div>
+            <div id="adminReviewsList" class="space-y-3 max-h-[500px] overflow-y-auto pr-1"></div>
+          </div>
+
+          <div id="tabContent-team" class="hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">এক্সপার্ট টিম ম্যানেজার</h4>
+              <button type="button" onclick="addNewTeamItem()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1">+ নতুন টিম মেম্বার যোগ করুন</button>
+            </div>
+            <div id="adminTeamList" class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[500px] overflow-y-auto pr-1"></div>
+          </div>
+
+          <div id="tabContent-clients" class="hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">ক্লায়েন্ট লোগো ম্যানেজার</h4>
+              <button type="button" onclick="addNewClientLogoItem()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1">+ নতুন লোগো যোগ করুন</button>
+            </div>
+            <div id="adminClientsList" class="space-y-2 max-h-[500px] overflow-y-auto pr-1"></div>
+          </div>
+
+          <div id="tabContent-footer" class="hidden space-y-3 bg-slate-900 p-4 rounded-2xl border border-slate-800">
+            <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">ফুটার ও লিঙ্কস এডিটর</h4>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">ফুটার লোগো URL</label>
+              <input type="url" id="admFooterLogoInput" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">কপিরাইট টেক্সট</label>
+              <input type="text" id="admCopyrightInput" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white">
+            </div>
+          </div>
+
+          <div id="tabContent-security" class="hidden space-y-3 bg-slate-900 p-4 rounded-2xl border border-slate-800">
+            <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider">পাসওয়ার্ড পরিবর্তন</h4>
+            <div>
+              <label class="block text-[11px] text-slate-300 mb-1">নতুন পাসওয়ার্ড</label>
+              <input type="password" id="newAdminPasswordInput" placeholder="নতুন পাসওয়ার্ড..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white">
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800 flex justify-end">
+            <button onclick="saveAdminData()" class="btn-emerald py-2.5 px-6 text-xs flex items-center gap-2 shadow-lg">
+              <i class="fa-solid fa-floppy-disk"></i> সেভ ও লাইভ আপডেট করুন
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    /* Navigation Active & ScrollSpy Styling */
+    .nav-link.active-nav {
+      background-color: #0B4121 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 12px rgba(11, 65, 33, 0.2);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Script block with fixed state saving, input retention, and clear save confirmation -->
+  <script>
+    const defaultSiteData = {
+      adminUser: 'কাউসার আহমেদ',
+      adminPassword: 'monstera123',
+      googleSheetUrl: 'https://script.google.com/macros/s/AKfycbzbTLmaDdqNBIIUJam2PWUd32qdK7EzY3l6i6fNT5wOX31xaojdsJYHxdLH9M3wuJE/exec',
+      bookingHeading: 'সাইট ভিজিট বুকিং ও তথ্য সারণী',
+      topOfferText: '🌿 এখন যেকোনো ল্যান্ডস্কেপ ও ছাদবাগান প্রজেক্টে পাচ্ছেন ফ্রি অন-সাইট কনসালটেশন! সরাসরি কল দিন: +880 1775-641861 🌿',
+      topPhone: '01775-641861',
+      heroSlides: [
+        'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
+      ],
+      heroTitle: 'কংক্রিটের শহরে তৈরি করুন <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#70BC42] to-[#0B4121]">প্রকৃতির সুশীতল ও অভিজাত আঙিনা</span>',
+      heroDesc: 'আমাদের দক্ষ ও সুসজ্জিত টিম দিচ্ছে আধুনিক বায়োফিলিক আর্কিটেকচার, কাস্টম ল্যান্ডস্কেপ ডিজাইন এবং ছাদবাগান সল্যুশন।',
+      heroBtnPrimary: 'সাইট ভিজিট বুক করুন',
+      heroBtnSecondary: 'প্রজেক্ট পোর্টফোলিও দেখুন',
+      services: [
+        { id: 1, title: 'Landscape Architecture & Design', desc: '৩ডি আর্কিটেকচারাল লেআউট ও ল্যান্ডস্কেপ প্ল্যান।', img: 'https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-compass-drafting' },
+        { id: 2, title: 'Rooftop Urban Forestry', desc: 'ড্রেনেজ ও লাইটওয়েট সয়েল দিয়ে ছাদবাগান নির্মাণ।', img: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-building-wheat' },
+        { id: 3, title: 'Wall Vertical Greenery', desc: 'ইনডোর ও আউটডোর গ্রিন ওয়াল ইনস্টলেশন।', img: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-border-all' },
+        { id: 4, title: 'Corporate Green Office', desc: 'অফিস ও শোরুমের ট্রপিক্যাল প্ল্যান্টস সল্যুশন।', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-briefcase' },
+        { id: 5, title: 'Smart Drip Irrigation', desc: 'স্বয়ংক্রিয় সেন্সরভিত্তিক পানি সেচ ব্যবস্থা।', img: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-droplet' },
+        { id: 6, title: 'Fountains & Koi Ponds', desc: 'প্রাকৃতিক ওয়াটার ফল ও কই ফিশ পন্ড ডেকোর।', img: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-water' },
+        { id: 7, title: 'Natural Grass Turf Lawn', desc: 'প্রাকৃতিক ঘাস ও সফটস্কেপ লন ডেভেলপমেন্ট।', img: 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-clover' },
+        { id: 8, title: 'Periodic Plant Maintenance', desc: 'বাগান পরিচর্যা, ছাঁটাই ও ফার্টিলাইজার কেয়ার।', img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-scissors' }
+      ],
+      products: [
+        { id: 1, title: 'প্রিমিয়াম অর্গানিক পটিং সয়েল', price: '৳ ৪৫০', pack: '২৫ কেজি প্যাক', tag: 'মাটির মিক্স', desc: 'স্পেশাল অর্গানিক মাটি। ছাদবাগান ও টবের জন্য সেরা।', img: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=512&h=512&q=80' },
+        { id: 2, title: 'প্রাকৃতিক ডেকোরেটিভ গার্ডেন পাথর', price: '৳ ৫৫০', pack: '১০ কেজি ব্যাগ', tag: 'ডেকোরেটিভ পাথর', desc: 'ইনডোর প্ল্যান্ট সাজানোর ইম্পোর্টেড মার্বেল ও স্লেট পাথর।', img: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=512&h=512&q=80' },
+        { id: 3, title: 'কম্প্রেসড কোকোপিট গার্ডেন ব্লক', price: '৳ ২৫০', pack: '৫ কেজি ব্লক', tag: 'গার্ডেন ব্লক', desc: 'পানি ধরে রাখার ক্ষমতা সম্পন্ন ১০০% বিশুদ্ধ কোকোপিট।', img: 'https://images.unsplash.com/photo-1617576683096-00fc8eecb3af?auto=format&fit=crop&w=512&h=512&q=80' }
+      ],
+      projects: [
+        { id: 1, title: 'গুলশান পেন্টহাউজ মডার্ন ছাদবাগান', location: 'গুলশান ২, ঢাকা', desc: 'গুলশান ২ এ অবস্থিত প্রিমিয়াম ড্রেনেজ প্যানেল সমৃদ্ধ ছাদবাগান।', images: ['https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&h=600&q=80'] },
+        { id: 2, title: 'ধানমন্ডি ইনডোর বায়োফিলিক প্ল্যান্ট ওয়াল', location: 'ধানমন্ডি, ঢাকা', desc: 'ধানমন্ডির ক্যাফে ইন্টারিয়রে গ্রিন ওয়াল প্রজেক্ট।', images: ['https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&h=600&q=80'] },
+        { id: 3, title: 'গাজীপুর রিসোর্ট লন অ্যান্ড ফাউন্টেন', location: 'গাজীপুর রিসোর্ট', desc: 'গাজীপুর রিসোর্টে প্রাকৃতিক ঘাস ও ওয়াটার ফল প্রজেক্ট।', images: ['https://images.unsplash.com/photo-1584467735815-f778f274e296?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=600&h=600&q=80'] },
+        { id: 4, title: 'বনানী কর্পোরেট অফিস গ্রিনারি', location: 'বনানী, ঢাকা', desc: 'বনানীতে আইটি ফার্মের অভ্যন্তরীণ বায়োফিলিক সাজসজ্জা।', images: ['https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&h=600&q=80'] },
+        { id: 5, title: 'উত্তরা কাস্টম ডেকোরেティブ গার্ডেন', location: 'উত্তরা, ঢাকা', desc: 'উত্তরা সেক্টর ৭ এ অবস্থিত ডেকোরেティブ ইরিগেশন বাগান।', images: ['https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&h=600&q=80'] },
+        { id: 6, title: 'পূর্বাচল ভিলা ট্রপিক্যাল ল্যান্ডস্কেপ', location: 'পূর্বাচল, ঢাকা', desc: 'পূর্বাচলে ভিলার প্রবেশদ্বারে কাস্টম ওয়াটারফল ল্যান্ডস্কেপ।', images: ['https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=600&h=600&q=80', 'https://images.unsplash.com/photo-1584467735815-f778f274e296?auto=format&fit=crop&w=600&h=600&q=80'] }
+      ],
+      reviews: [
+        { name: 'রেহানা পারভীন', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&h=120&q=80', text: 'মনস্টেরা টিম আমাদের গুলশানের ছাদবাগানটি দারুণ একটি গ্রিন লাউঞ্জ বানিয়ে দিয়েছে।' },
+        { name: 'তানভীর মাহমুদ', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80', text: 'আমাদের অফিসে ভার্টিকাল প্ল্যান্ট ওয়ালটি আসার পর কাজের পরিবেশ চমৎকার বদলে গেছে।' },
+        { name: 'আরিফুল ইসলাম', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80', text: 'প্রফেশনাল ইউনিফর্ম পরা দক্ষ টিমের নিখুঁত কাজ আমাকে ভীষণ মুগ্ধ করেছে।' }
+      ],
+      team: [
+        { name: 'ইনজ. তানভীর আহমেদ', role: 'চিফ ল্যান্ডস্কেপ আর্কিটেক্ট', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&h=300&q=80' },
+        { name: 'নুসরাত জাহান', role: 'বায়োফিলিক ডিজাইনার', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300&q=80' },
+        { name: 'আরিফুল ইসলাম', role: 'প্রজেক্ট ইঞ্জিনিয়ার', img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&h=300&q=80' },
+        { name: 'ফারহানা তাসনিম', role: 'প্ল্যান্ট স্পেশালিস্ট', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&h=300&q=80' },
+        { name: 'মাহমুদুল হাসান', role: 'ইরিগেশন এক্সপার্ট', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300&q=80' },
+        { name: 'সাকিব আল হাসান', role: 'সাইট সুপারভাইজার', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&h=300&q=80' }
+      ],
+      clientLogos: [
+        'https://placehold.co/180x60/0B4121/ffffff?text=Monstera+Corp',
+        'https://placehold.co/180x60/70BC42/ffffff?text=GreenField+BD',
+        'https://placehold.co/180x60/0B4121/ffffff?text=Urban+Flora',
+        'https://placehold.co/180x60/1e293b/ffffff?text=EcoSpace+Ltd'
+      ],
+      footerLogo: 'https://i.ibb.co.com/XxmDT0Vq/monstera-website-logo-245x40-pix.png',
+      copyrightText: '© 2026 Monstera BD. All Rights Reserved.'
+    };
+
+    window.defaultSiteData = defaultSiteData;
+    
+    // Read and merge saved state cleanly from localStorage
+    function loadStoredSiteData() {
+      try {
+        const saved = localStorage.getItem('monsteraSiteData');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          return Object.assign({}, defaultSiteData, parsed);
+        }
+      } catch(e) {
+        console.warn("Storage load error:", e);
+      }
+      return Object.assign({}, defaultSiteData);
+    }
+
+    window.siteData = loadStoredSiteData();
+
+    try {
+      loadedData = JSON.parse(localStorage.getItem('monsteraSiteData'));
+    } catch(e) {}
+
+    window.siteData = Object.assign({}, defaultSiteData, loadedData || {});
+
+    let counterObserver = null;
+    function initCounters() {
+      const counters = document.querySelectorAll('.counter-number');
+      if (counterObserver) counterObserver.disconnect();
+
+      counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-target')) || 0;
+            let count = 0;
+            const step = Math.max(1, Math.ceil(target / 30));
+            const timer = setInterval(() => {
+              count += step;
+              if (count >= target) {
+                el.innerText = target + '+';
+                clearInterval(timer);
+              } else {
+                el.innerText = count + '+';
+              }
+            }, 35);
+          } else {
+            entry.target.innerText = '0+';
+          }
+        });
+      }, { threshold: 0.2 });
+
+      counters.forEach(el => counterObserver.observe(el));
+    }
+
+    function renderWebsiteUI() {
+      const s = window.siteData || window.defaultSiteData;
+
+      if (document.getElementById('topOfferMarquee')) document.getElementById('topOfferMarquee').innerText = s.topOfferText || '';
+      if (document.getElementById('topPhoneText')) document.getElementById('topPhoneText').innerHTML = `<i class="fa-solid fa-phone mr-1.5"></i>${s.topPhone || '01775-641861'}`;
+      if (document.getElementById('heroTitle')) document.getElementById('heroTitle').innerHTML = s.heroTitle || '';
+      if (document.getElementById('heroDescription')) document.getElementById('heroDescription').innerText = s.heroDesc || '';
+      if (document.getElementById('heroBtnPrimary')) document.getElementById('heroBtnPrimary').innerText = s.heroBtnPrimary || 'সাইট ভিজিট বুক করুন';
+      if (document.getElementById('heroBtnSecondary')) document.getElementById('heroBtnSecondary').innerText = s.heroBtnSecondary || 'প্রজেক্ট পোর্টফোলিও দেখুন';
+      if (document.getElementById('bookingSectionHeading')) document.getElementById('bookingSectionHeading').innerText = s.bookingHeading || 'সাইট ভিজিট বুকিং ও তথ্য সারণী';
+
+      // Render Hero Slides dynamically
+      const sliderWrapper = document.getElementById('heroSliderWrapper');
+      if (sliderWrapper) {
+        sliderWrapper.innerHTML = '';
+        const slides = (s.heroSlides && s.heroSlides.length > 0) ? s.heroSlides : defaultSiteData.heroSlides;
+        slides.forEach(imgUrl => {
+          sliderWrapper.innerHTML += `<div class="swiper-slide"><img src="${imgUrl}" class="w-full h-full object-cover"></div>`;
+        });
+      }
+
+      // Render 8 Services
+      const srvGrid = document.getElementById('servicesGridContainer');
+      if (srvGrid) {
+        srvGrid.innerHTML = '';
+        (s.services || []).forEach((srv, idx) => {
+          srvGrid.innerHTML += `
+            <div class="service-card-soft-green p-2.5 flex flex-col group shadow-sm">
+              <div class="h-28 sm:h-36 rounded-xl overflow-hidden relative mb-2.5">
+                <img src="${srv.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute top-2 left-2 bg-forestDark text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">${String(idx + 1).padStart(2, '0')}</div>
+              </div>
+              <div class="p-2 flex-1 flex flex-col justify-between text-left">
+                <h3 class="text-xs sm:text-base font-bold text-forestDark mb-1 flex items-start gap-1">
+                  <i class="${srv.icon || 'fa-solid fa-leaf'} text-[#70BC42] text-sm shrink-0 mt-0.5"></i>
+                  <span class="english-text">${srv.title}</span>
+                </h3>
+                <p class="text-xs text-slate-600 font-normal leading-snug line-clamp-2">${srv.desc}</p>
+              </div>
+            </div>`;
+        });
+      }
+
+      // Render Products
+      const prodGrid = document.getElementById('productsShopContainer');
+      if (prodGrid) {
+        prodGrid.innerHTML = '';
+        (s.products || []).forEach(prd => {
+          prodGrid.innerHTML += `
+            <div class="glass-card-light overflow-hidden flex flex-col justify-between p-3.5 group border border-slate-200/80">
+              <div>
+                <div class="w-full aspect-square rounded-xl overflow-hidden relative mb-2 bg-slate-100">
+                  <img src="${prd.img}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                  <span class="absolute top-2 left-2 bg-[#0B4121] text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">${prd.tag || 'গার্ডেন'}</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-forestDark mb-1 leading-snug">${prd.title}</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-3 font-normal line-clamp-2">${prd.desc}</p>
+              </div>
+              <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-bold text-forestDark bg-emerald-100/70 px-2 py-0.5 rounded border border-emerald-300 block mb-0.5">${prd.pack || ''}</span>
+                  <span class="text-base sm:text-lg font-black text-forestDark">${prd.price}</span>
+                </div>
+                <a href="https://wa.me/8801775641861" target="_blank" class="btn-emerald py-1.5 px-3 text-xs flex items-center gap-1 shadow">
+                  <i class="fa-solid fa-cart-shopping"></i> অর্ডার করুন
+                </a>
+              </div>
+            </div>`;
+        });
+      }
+
+      // Render Projects
+      const projGrid = document.getElementById('projectsGridContainer');
+      if (projGrid) {
+        projGrid.innerHTML = '';
+        (s.projects || []).forEach(proj => {
+          const imgsJson = JSON.stringify(proj.images || []).replace(/"/g, '&quot;');
+          projGrid.innerHTML += `
+            <div class="glass-card-light overflow-hidden group cursor-pointer border border-slate-200/80 p-2 sm:p-2.5 bg-white flex flex-col justify-between shadow-md hover:shadow-xl transition duration-300" onclick="openMultiModal('${proj.title}', '${proj.desc}', ${imgsJson})">
+              <div>
+                <div class="w-full aspect-square rounded-xl overflow-hidden relative mb-2 bg-slate-100 shadow-inner">
+                  <img src="${proj.images?.[0] || 'https://placehold.co/512x512'}" class="w-full h-full object-cover group-hover:scale-108 transition duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-forestDark/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                    <span class="text-white text-xs font-bold flex items-center gap-2">
+                      <i class="fa-solid fa-images text-[#70BC42]"></i> ${(proj.images || []).length}টি ছবি দেখুন
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between px-1 pb-1">
+                <div>
+                  <h3 class="text-xs sm:text-sm font-bold text-forestDark leading-snug">${proj.title}</h3>
+                  <p class="text-[11px] text-slate-500 mt-0.5 font-semibold">${proj.location}</p>
+                </div>
+                <span class="text-xs font-bold text-[#70BC42] bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60 shrink-0 shadow-sm ml-2">
+                  <i class="fa-solid fa-expand text-[10px]"></i> ভিউ
+                </span>
+              </div>
+            </div>`;
+        });
+      }
+
+      // Render Team Members
+      const teamGrid = document.getElementById('teamGridContainer');
+      if (teamGrid) {
+        teamGrid.innerHTML = '';
+        (s.team || []).forEach(tm => {
+          teamGrid.innerHTML += `
+            <div class="glass-card-light p-3 flex flex-col items-center group">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-[#70BC42]/60 shadow-md mb-2 bg-slate-100 relative">
+                <img src="${tm.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+              </div>
+              <h3 class="text-xs sm:text-sm font-bold text-forestDark leading-tight">${tm.name}</h3>
+              <p class="text-[10px] sm:text-xs text-[#70BC42] font-semibold mt-0.5">${tm.role}</p>
+            </div>`;
+        });
+      }
+
+      // Reviews
+      const revGrid = document.getElementById('reviewsGridContainer');
+      if (revGrid) {
+        revGrid.innerHTML = '';
+        (s.reviews || []).forEach(rev => {
+          revGrid.innerHTML += `
+            <div class="glass-card-light p-5 border-l-4 border-l-[#70BC42] flex flex-col justify-between">
+              <p class="text-xs sm:text-sm text-slate-700 italic mb-4 leading-relaxed font-normal">"${rev.text}"</p>
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+                <img src="${rev.avatar || 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&h=120&q=80'}" class="w-9 h-9 rounded-full object-cover border border-emerald-300 shadow-sm">
+                <div>
+                  <h4 class="text-xs sm:text-sm font-bold text-forestDark">${rev.name}</h4>
+                  <div class="text-[10px] text-amber-500 flex gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+              </div>
+            </div>`;
+        });
+      }
+
+      // Client Logos
+      const marquee = document.getElementById('clientLogosMarquee');
+      if (marquee) {
+        marquee.innerHTML = '';
+        const logos = (s.clientLogos || []).filter(l => l && l.trim() !== '');
+        const allLogos = logos.length > 0 ? [...logos, ...logos] : [];
+        allLogos.forEach(logoUrl => {
+          marquee.innerHTML += `
+            <div class="h-12 px-5 bg-white border border-slate-200 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+              <img src="${logoUrl}" class="h-8 object-contain">
+            </div>`;
+        });
+      }
+
+      if (document.getElementById('footerLogoImg')) document.getElementById('footerLogoImg').src = s.footerLogo || 'https://i.ibb.co.com/XxmDT0Vq/monstera-website-logo-245x40-pix.png';
+      if (document.getElementById('footerCopyrightText')) document.getElementById('footerCopyrightText').innerText = s.copyrightText || '© 2026 Monstera BD. All Rights Reserved.';
+
+      initCounters();
+    }
+
+    // Modal Operations
+    function openMultiModal(title, desc, images) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDesc').innerText = desc;
+      const grid = document.getElementById('modalImagesGrid');
+      grid.innerHTML = '';
+      (images || []).forEach(img => {
+        if (img) grid.innerHTML += `<div class="aspect-square rounded-xl overflow-hidden bg-slate-100 border"><img src="${img}" class="w-full h-full object-cover"></div>`;
+      });
+      document.getElementById('galleryModal').classList.add('active');
+    }
+    function closeModal() { document.getElementById('galleryModal').classList.remove('active'); }
+
+    // Admin Panel Controls
+    let secretCount = 0;
+    function handleSecretClick() {
+      secretCount++;
+      if (secretCount >= 3) {
+        secretCount = 0;
+        openAdminModal();
+      }
+    }
+    function openAdminModal() { document.getElementById('adminModalOverlay').classList.add('active'); }
+    function closeAdminModal() { document.getElementById('adminModalOverlay').classList.remove('active'); }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const pwd = document.getElementById('adminPasswordInput').value;
+      if (pwd === (window.siteData.adminPassword || 'monstera123')) {
+        document.getElementById('adminLoginSection').classList.add('hidden');
+        document.getElementById('adminPanelContent').classList.remove('hidden');
+        populateAdminFields();
+      } else {
+        document.getElementById('loginErrorMsg').classList.remove('hidden');
+      }
+    }
+    function adminLogout() {
+      document.getElementById('adminLoginSection').classList.remove('hidden');
+      document.getElementById('adminPanelContent').classList.add('hidden');
+      closeAdminModal();
+    }
+
+    function switchAdminTab(tabName) {
+      const tabs = ['hero', 'booking', 'services', 'products', 'projects', 'reviews', 'team', 'clients', 'footer', 'security'];
+      tabs.forEach(t => {
+        const el = document.getElementById(`tabContent-${t}`);
+        const btn = document.getElementById(`sidebarBtn-${t}`);
+        if (el) el.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('bg-emerald-900/50', 'border-l-4', 'border-[#70BC42]', 'text-white', 'font-bold');
+          btn.classList.add('text-slate-300', 'font-semibold');
+        }
+      });
+      const currentTab = document.getElementById(`tabContent-${tabName}`);
+      const currentBtn = document.getElementById(`sidebarBtn-${tabName}`);
+      if (currentTab) currentTab.classList.remove('hidden');
+      if (currentBtn) {
+        currentBtn.classList.remove('text-slate-300', 'font-semibold');
+        currentBtn.classList.add('bg-emerald-900/50', 'border-l-4', 'border-[#70BC42]', 'text-white', 'font-bold');
+      }
+    }
+
+    function addAdminHeroSlideField(urlVal = '') {
+      const container = document.getElementById('adminHeroSlidesList');
+      if (!container) return;
+      const row = document.createElement('div');
+      row.className = 'flex items-center gap-2';
+      row.innerHTML = `
+        <input type="url" value="${urlVal}" placeholder="https://..." class="hero-slide-input flex-1 bg-slate-950 border border-slate-800 rounded px-2 py-1.5 text-xs text-white">
+        <button type="button" onclick="this.parentElement.remove()" class="bg-rose-900/60 hover:bg-rose-800 text-rose-200 px-2.5 py-1.5 rounded text-xs"><i class="fa-solid fa-trash"></i></button>
+      `;
+      container.appendChild(row);
+    }
+
+    function populateAdminFields() {
+      const s = window.siteData;
+      if (document.getElementById('admSidebarUser')) document.getElementById('admSidebarUser').innerText = s.adminUser || 'কাউসার আহমেদ';
+      if (document.getElementById('admOfferTextInput')) document.getElementById('admOfferTextInput').value = s.topOfferText || '';
+      if (document.getElementById('admTopPhoneInput')) document.getElementById('admTopPhoneInput').value = s.topPhone || '';
+      if (document.getElementById('admGoogleSheetUrlInput')) document.getElementById('admGoogleSheetUrlInput').value = s.googleSheetUrl || '';
+      if (document.getElementById('admBookingHeadingInput')) document.getElementById('admBookingHeadingInput').value = s.bookingHeading || 'সাইট ভিজিট বুকিং ও তথ্য সারণী';
+      if (document.getElementById('admHeroTitleInput')) document.getElementById('admHeroTitleInput').value = s.heroTitle || '';
+      if (document.getElementById('admHeroDescInput')) document.getElementById('admHeroDescInput').value = s.heroDesc || '';
+      if (document.getElementById('admHeroBtn1Input')) document.getElementById('admHeroBtn1Input').value = s.heroBtnPrimary || '';
+      if (document.getElementById('admHeroBtn2Input')) document.getElementById('admHeroBtn2Input').value = s.heroBtnSecondary || '';
+
+      const slidesList = document.getElementById('adminHeroSlidesList');
+      if (slidesList) {
+        slidesList.innerHTML = '';
+        const slides = (s.heroSlides && s.heroSlides.length > 0) ? s.heroSlides : defaultSiteData.heroSlides;
+        slides.forEach(url => addAdminHeroSlideField(url));
+      }
+
+      renderAdminServices();
+      renderAdminProducts();
+      renderAdminProjects();
+      renderAdminReviews();
+      renderAdminTeam();
+      renderAdminClients();
+
+      if (document.getElementById('admFooterLogoInput')) document.getElementById('admFooterLogoInput').value = s.footerLogo || '';
+      if (document.getElementById('admCopyrightInput')) document.getElementById('admCopyrightInput').value = s.copyrightText || '';
+    }
+
+    function renderAdminServices() {
+      const srvList = document.getElementById('adminServicesList');
+      if (!srvList) return;
+      srvList.innerHTML = '';
+      (window.siteData.services || []).forEach((srv, i) => {
+        srvList.innerHTML += `
+          <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 space-y-1.5 text-xs relative group">
+            <div class="flex items-center justify-between">
+              <span class="text-emerald-400 font-bold">সার্ভিস #${i+1}</span>
+              <button type="button" onclick="deleteServiceItem(${i})" class="text-rose-400 hover:text-rose-300 font-bold text-[10px]"><i class="fa-solid fa-trash mr-1"></i>মুছুন</button>
+            </div>
+            <input type="text" value="${srv.title || ''}" oninput="window.siteData.services[${i}].title=this.value" placeholder="টাইটেল" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="text" value="${srv.desc || ''}" oninput="window.siteData.services[${i}].desc=this.value" placeholder="বিবরণ" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="url" value="${srv.img || ''}" oninput="window.siteData.services[${i}].img=this.value" placeholder="ছবি URL" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+          </div>`;
+      });
+    }
+
+    function addNewServiceItem() {
+      if (!window.siteData.services) window.siteData.services = [];
+      window.siteData.services.push({ id: Date.now(), title: 'নতুন সার্ভিস', desc: 'সার্ভিসের বিস্তারিত বিবরণ...', img: 'https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=500&q=80', icon: 'fa-solid fa-leaf' });
+      renderAdminServices();
+    }
+
+    function deleteServiceItem(index) {
+      window.siteData.services.splice(index, 1);
+      renderAdminServices();
+    }
+
+    function renderAdminProducts() {
+      const prdList = document.getElementById('adminProductsList');
+      if (!prdList) return;
+      prdList.innerHTML = '';
+      (window.siteData.products || []).forEach((prd, i) => {
+        prdList.innerHTML += `
+          <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 space-y-1.5 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-emerald-400 font-bold">প্রোডাক্ট #${i+1}</span>
+              <button type="button" onclick="deleteProductItem(${i})" class="text-rose-400 hover:text-rose-300 text-[10px] font-bold"><i class="fa-solid fa-trash mr-1"></i>মুছুন</button>
+            </div>
+            <input type="text" value="${prd.title || ''}" oninput="window.siteData.products[${i}].title=this.value" placeholder="প্রোডাক্ট নাম" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="text" value="${prd.price || ''}" oninput="window.siteData.products[${i}].price=this.value" placeholder="মূল্য (যেমন: ৳ ৪৫০)" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="text" value="${prd.pack || ''}" oninput="window.siteData.products[${i}].pack=this.value" placeholder="প্যাক/ওজন" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="url" value="${prd.img || ''}" oninput="window.siteData.products[${i}].img=this.value" placeholder="ছবি URL" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+          </div>`;
+      });
+    }
+
+    function addNewProductItem() {
+      if (!window.siteData.products) window.siteData.products = [];
+      window.siteData.products.push({ id: Date.now(), title: 'নতুন প্রোডাক্ট', price: '৳ ৫০০', pack: '১ প্যাক', tag: 'অর্গানিক', desc: 'নতুন প্রোডাক্টের বিস্তারিত বিবরণ...', img: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=512&h=512&q=80' });
+      renderAdminProducts();
+    }
+
+    function deleteProductItem(index) {
+      window.siteData.products.splice(index, 1);
+      renderAdminProducts();
+    }
+
+    function renderAdminProjects() {
+      const projList = document.getElementById('adminProjectsList');
+      if (!projList) return;
+      projList.innerHTML = '';
+      (window.siteData.projects || []).forEach((proj, i) => {
+        projList.innerHTML += `
+          <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 space-y-1.5 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-emerald-400 font-bold">প্রজেক্ট #${i+1}</span>
+              <button type="button" onclick="deleteProjectItem(${i})" class="text-rose-400 hover:text-rose-300 text-[10px] font-bold"><i class="fa-solid fa-trash mr-1"></i>মুছুন</button>
+            </div>
+            <input type="text" value="${proj.title || ''}" oninput="window.siteData.projects[${i}].title=this.value" placeholder="প্রজেক্ট টাইটেল" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="text" value="${proj.location || ''}" oninput="window.siteData.projects[${i}].location=this.value" placeholder="লোকেশন" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="url" value="${proj.images?.[0] || ''}" oninput="if(!window.siteData.projects[${i}].images) window.siteData.projects[${i}].images=[]; window.siteData.projects[${i}].images[0]=this.value" placeholder="কভার ছবি URL" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+          </div>`;
+      });
+    }
+
+    function addNewProjectItem() {
+      if (!window.siteData.projects) window.siteData.projects = [];
+      window.siteData.projects.push({ id: Date.now(), title: 'নতুন কাস্টম ল্যান্ডস্কেপিং প্রজেক্ট', location: 'ঢাকা, বাংলাদেশ', desc: 'প্রজেক্টের বিস্তারিত তথ্য', images: ['https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=600&h=600&q=80'] });
+      renderAdminProjects();
+    }
+
+    function deleteProjectItem(index) {
+      window.siteData.projects.splice(index, 1);
+      renderAdminProjects();
+    }
+
+    function renderAdminReviews() {
+      const revList = document.getElementById('adminReviewsList');
+      if (!revList) return;
+      revList.innerHTML = '';
+      (window.siteData.reviews || []).forEach((rev, i) => {
+        revList.innerHTML += `
+          <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 space-y-1.5 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-emerald-400 font-bold">রিভিউ #${i+1}</span>
+              <button type="button" onclick="deleteReviewItem(${i})" class="text-rose-400 hover:text-rose-300 text-[10px] font-bold"><i class="fa-solid fa-trash mr-1"></i>মুছুন</button>
+            </div>
+            <input type="text" value="${rev.name || ''}" oninput="window.siteData.reviews[${i}].name=this.value" placeholder="ক্লায়েন্ট নাম" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="text" value="${rev.text || ''}" oninput="window.siteData.reviews[${i}].text=this.value" placeholder="মতামত টেক্সট" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="url" value="${rev.avatar || ''}" oninput="window.siteData.reviews[${i}].avatar=this.value" placeholder="ক্লায়েন্ট ছবি URL (Avatar)" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+          </div>`;
+      });
+    }
+
+    function addNewReviewItem() {
+      if (!window.siteData.reviews) window.siteData.reviews = [];
+      window.siteData.reviews.push({ id: Date.now(), name: 'নতুন ক্লায়েন্ট', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&h=120&q=80', text: 'মনস্টেরা টিমের কাজ সত্যিই চমৎকার!' });
+      renderAdminReviews();
+    }
+
+    function deleteReviewItem(index) {
+      window.siteData.reviews.splice(index, 1);
+      renderAdminReviews();
+    }
+
+    function renderAdminTeam() {
+      const teamList = document.getElementById('adminTeamList');
+      if (!teamList) return;
+      teamList.innerHTML = '';
+      (window.siteData.team || []).forEach((tm, i) => {
+        teamList.innerHTML += `
+          <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 space-y-1.5 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-emerald-400 font-bold">টিম মেম্বার #${i+1}</span>
+              <button type="button" onclick="deleteTeamItem(${i})" class="text-rose-400 hover:text-rose-300 text-[10px] font-bold"><i class="fa-solid fa-trash mr-1"></i>মুছুন</button>
+            </div>
+            <input type="text" value="${tm.name || ''}" oninput="window.siteData.team[${i}].name=this.value" placeholder="নাম" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="text" value="${tm.role || ''}" oninput="window.siteData.team[${i}].role=this.value" placeholder="পদবি" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+            <input type="url" value="${tm.img || ''}" oninput="window.siteData.team[${i}].img=this.value" placeholder="প্রোফাইল ছবি URL" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+          </div>`;
+      });
+    }
+
+    function addNewTeamItem() {
+      if (!window.siteData.team) window.siteData.team = [];
+      window.siteData.team.push({ id: Date.now(), name: 'নতুন টিম সদস্য', role: 'ল্যান্ডস্কেপ স্পেশালিস্ট', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&h=300&q=80' });
+      renderAdminTeam();
+    }
+
+    function deleteTeamItem(index) {
+      window.siteData.team.splice(index, 1);
+      renderAdminTeam();
+    }
+
+    function renderAdminClients() {
+      const clientList = document.getElementById('adminClientsList');
+      if (!clientList) return;
+      clientList.innerHTML = '';
+      (window.siteData.clientLogos || []).forEach((logo, i) => {
+        clientList.innerHTML += `
+          <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 space-y-1 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-emerald-400 font-bold">লোগো #${i+1}</span>
+              <button type="button" onclick="deleteClientLogoItem(${i})" class="text-rose-400 hover:text-rose-300 text-[10px] font-bold"><i class="fa-solid fa-trash mr-1"></i>মুছুন</button>
+            </div>
+            <input type="url" value="${logo || ''}" oninput="window.siteData.clientLogos[${i}]=this.value" placeholder="লোগো ইমেজ URL" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white">
+          </div>`;
+      });
+    }
+
+    function addNewClientLogoItem() {
+      if (!window.siteData.clientLogos) window.siteData.clientLogos = [];
+      window.siteData.clientLogos.push('https://placehold.co/180x60/0B4121/ffffff?text=New+Client');
+      renderAdminClients();
+    }
+
+    function deleteClientLogoItem(index) {
+      window.siteData.clientLogos.splice(index, 1);
+      renderAdminClients();
+    }
+
+    function saveAdminData() {
+      const s = window.siteData;
+      if (document.getElementById('admGoogleSheetUrlInput')) s.googleSheetUrl = document.getElementById('admGoogleSheetUrlInput').value.trim();
+      if (document.getElementById('admBookingHeadingInput')) s.bookingHeading = document.getElementById('admBookingHeadingInput').value;
+      if (document.getElementById('admOfferTextInput')) s.topOfferText = document.getElementById('admOfferTextInput').value;
+      if (document.getElementById('admTopPhoneInput')) s.topPhone = document.getElementById('admTopPhoneInput').value;
+      if (document.getElementById('admHeroTitleInput')) s.heroTitle = document.getElementById('admHeroTitleInput').value;
+      if (document.getElementById('admHeroDescInput')) s.heroDesc = document.getElementById('admHeroDescInput').value;
+      if (document.getElementById('admHeroBtn1Input')) s.heroBtnPrimary = document.getElementById('admHeroBtn1Input').value;
+      if (document.getElementById('admHeroBtn2Input')) s.heroBtnSecondary = document.getElementById('admHeroBtn2Input').value;
+
+      const slideInputs = document.querySelectorAll('.hero-slide-input');
+      const newSlides = [];
+      slideInputs.forEach(inp => {
+        if (inp.value && inp.value.trim() !== '') {
+          newSlides.push(inp.value.trim());
+        }
+      });
+      if (newSlides.length > 0) {
+        s.heroSlides = newSlides;
+      }
+
+      if (document.getElementById('admFooterLogoInput')) s.footerLogo = document.getElementById('admFooterLogoInput').value;
+      if (document.getElementById('admCopyrightInput')) s.copyrightText = document.getElementById('admCopyrightInput').value;
+
+      const newPwd = document.getElementById('newAdminPasswordInput') ? document.getElementById('newAdminPasswordInput').value : '';
+      if (newPwd && newPwd.trim() !== '') {
+        s.adminPassword = newPwd.trim();
+        document.getElementById('newAdminPasswordInput').value = '';
+      }
+
+      // Save persistent copy in localStorage
+      try {
+        localStorage.setItem('monsteraSiteData', JSON.stringify(s));
+      } catch(e) {
+        console.error("Local storage save error:", e);
+      }
+
+      renderWebsiteUI();
+      if (typeof initHeroSwiper === 'function') initHeroSwiper();
+
+      // Modal custom feedback UI instead of blocking native alert
+      const feedback = document.createElement('div');
+      feedback.className = 'fixed bottom-5 right-5 bg-forestDark text-white px-5 py-3 rounded-2xl shadow-2xl border border-emerald-400 z-[10000] text-xs font-bold flex items-center gap-2';
+      feedback.innerHTML = '<i class="fa-solid fa-circle-check text-[#70BC42] text-base"></i> তথ্য ও লিঙ্ক ড্যাশবোর্ডে স্থায়ীভাবে সংরক্ষণ করা হয়েছে!';
+      document.body.appendChild(feedback);
+      setTimeout(() => feedback.remove(), 4000);
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const formData = {
+        name: e.target.name.value,
+        phone: e.target.phone.value,
+        service: e.target.service.value,
+        location: e.target.location.value,
+        message: e.target.message.value,
+        submittedAt: new Date().toLocaleString('bn-BD')
+      };
+
+      const sheetUrl = window.siteData ? window.siteData.googleSheetUrl : '';
+      if (sheetUrl && sheetUrl.trim() !== '') {
+        fetch(sheetUrl.trim(), {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        }).catch(err => console.warn("Sheet post note:", err));
+      }
+
+      document.getElementById('formSuccess').classList.remove('hidden');
+      e.target.reset();
+      setTimeout(() => document.getElementById('formSuccess').classList.add('hidden'), 5000);
+    }
+
+    function initHeroSwiper() {
+      const swiperContainer = document.querySelector('.heroSwiper');
+      if (swiperContainer && swiperContainer.swiper) {
+        swiperContainer.swiper.destroy(true, true);
+      }
+      new Swiper('.heroSwiper', {
+        loop: true,
+        autoplay: { delay: 3500, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      });
+    }
+
+    function initScrollSpy() {
+      const sections = document.querySelectorAll('section[id]');
+      const navContainer = document.querySelector('.header-glass-bar');
+      
+      window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY + 180;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        if (currentSectionId) {
+          const navLinks = document.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+            link.classList.remove('active-nav');
+            if (link.getAttribute('id') === `nav-${currentSectionId}`) {
+              link.classList.add('active-nav');
+              
+              if (navContainer) {
+                const linkOffsetLeft = link.offsetLeft;
+                const linkWidth = link.offsetWidth;
+                const containerWidth = navContainer.offsetWidth;
+                navContainer.scrollTo({
+                  left: linkOffsetLeft - (containerWidth / 2) + (linkWidth / 2),
+                  behavior: 'smooth'
+                });
+              }
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderWebsiteUI();
+      initHeroSwiper();
+      initScrollSpy();
+    });
+  </script>
+</body>
+</html>
